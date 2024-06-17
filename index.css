@@ -1,0 +1,123 @@
+
+.card{
+  width: 400px;
+  height: 100%; 
+  background-size: cover; 
+  background-position: center; 
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;  
+  flex-shrink: 0;
+  
+}
+
+.mainContainer {
+  height: calc(100vh - 60px);
+  transition: margin-left 250ms;
+  background-color: rgba(34,31,31,.95);
+  min-width: 100%;
+} 
+
+
+.card:hover .cardFullInfo {
+  display: flex !important;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,.12);
+
+
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-style: normal;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 30px;
+
+
+
+}
+
+
+.topLinks:hover i {
+  
+  background-color: red; /* Изменяем фон при наведении */
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.topLinks:hover div {
+
+  color: red; /* Изменяем фон при наведении */
+  transition: background-color 0.5s, color 0.5s;
+}
+
+
+
+
+
+.card {
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#modalWindow {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  overflow: auto;
+
+
+  background-size: cover; 
+  background-position: center; 
+
+  z-index: 1050; /* Должен быть выше z-index overlay */
+
+}
+
+#closeModal {
+
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+
+#closeModal :hover{
+  background-color: yellow;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный фон */
+  z-index: 1040; /* Должен быть выше z-index других элементов, но ниже модального окна */
+  display: none; /* По умолчанию скрыт */
+}
+
