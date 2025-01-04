@@ -23,14 +23,14 @@ class WorkWithAPI {
 
     async getArrayMovies() {
 
-        let get = `http://www.omdbapi.com/?apikey=520e759c&s=${title.value}&type=movie&page=${page}`
+        let get = `https://www.omdbapi.com/?apikey=520e759c&s=${title.value}&type=movie&page=${page}`
         let response = await fetch(get)
         let currencies = await response.json()
         return currencies
     }
 
     async geFullMovie(e) {
-        let get = `http://www.omdbapi.com/?apikey=520e759c&t=${e.parentNode.childNodes[0].innerText}&type=movie&plot=full`
+        let get = `https://www.omdbapi.com/?apikey=520e759c&t=${e.parentNode.childNodes[0].innerText}&type=movie&plot=full`
         let response = await fetch(get)
         console.log(response)
         let currencies = await response.json()
@@ -38,7 +38,7 @@ class WorkWithAPI {
     }
 
     async getContentMovie(e) {
-        let get = `http://www.omdbapi.com/?apikey=520e759c&i=${e}`
+        let get = `https://www.omdbapi.com/?apikey=520e759c&i=${e}`
         let response = await fetch(get)
         let currencies = await response.json()
         console.log(currencies)
